@@ -50,6 +50,7 @@ img{
     height:150px;
     margin: 5px 5px;
     border-radius: 20px;
+    background-size: cover;
 }
 h2{
     font-family:var(--heading-font);
@@ -76,9 +77,12 @@ h3{
     cursor: pointer;
 }
 .btn:hover{
-    transform: scale(1.1);
     transform: translateY(-10px);
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-out;
+}
+.btn:active{
+    transform: scale(0.8);
+    transition:  ease-out;
 }
 .radio-group
 {
@@ -99,7 +103,7 @@ h1{
     font-family:var(--heading-font);
     color:#480F0F;
     font-size: 3em;
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
 }
 .payout-list{
@@ -112,10 +116,22 @@ li{
     padding : 10px 5px;
 }
 .total-price{
-    width: 100px;
     height: 100px;
     background-color: rgba(45,50,39,0.8) ;
     border-radius:10px ;
     margin: 0 20px;
     color:#480F0F;
+    font-size: 50px;
+    padding:25px;
+}
+.pay-btn{
+    border-radius: 10px;
+    border:none;
+}
+.pay-btn:hover{
+    background-color:rgba(30,237,45,0.5);
+}
+.pay-btn:active{
+    transform: translateY(10px);
+    transform: scale(0.8);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <script src="main.js"></script>
     <title>Coffee SHOP</title>
 </head>
+
 <body>
-    <section class = "main">
+    <section class="main">
         <header>
             <h1>
                 Keval's Coffee Shop
@@ -17,54 +19,64 @@
         </header>
         <div class="container">
             <div class="card">
-                <img src="https://source.unsplash.com/450x450/?espresso-coffee" alt="espresso">
+                <img src="https://images.pexels.com/photos/1660916/pexels-photo-1660916.jpeg?cs=srgb&dl=pexels-igor-starkov-1660916.jpg&fm=jpg&_gl=1*1o55qn*_ga*MTUyNjExNTU3OC4xNjY3MDM3NTYz*_ga_8JE65Q40S6*MTY2NzAzNzU2NC4xLjEuMTY2NzAzNzYyNi4wLjAuMA.."
+                    alt="espresso">
                 <h2>espresso</h2>
                 <h3>WITH</h3>
                 <div class="radio-group">
-                    <input type="radio" id="milk-espresso" value="espresso-milk-60" name="selector">
+                    <input type="radio" id="Espresso" value="Espresso-milk-60" name="selector">
                     <label for="milk-espresso">milk - 60</label>
-                    <input type="radio" id="cream-espresso" value="espresso-cream-75" name="selector">
+                    <input type="radio" id="Espresso" value="Espresso-cream-75" name="selector">
                     <label for="cream-espresso">cream - 75</label>
-                    <input type="radio" id="latte-espresso" value="espresso-latte-100" name="selector">
+                    <input type="radio" id="Espresso" value="Espresso-latte-100" name="selector">
                     <label for="latte-espresso">latte - 100</label>
-                      </div>
-                <button class = "btn" id="es" >Add to Cart</button>
+                </div>
+                <button class="add-btn btn" id="es">Add to Cart</button>
             </div>
             <div class="card">
-                <img src="https://source.unsplash.com/450x450/?cappucino-coffee" alt="Cappucinno">
+                <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?cs=srgb&dl=pexels-chevanon-photography-302899.jpg&fm=jpg&_gl=1*1lv8iei*_ga*MTUyNjExNTU3OC4xNjY3MDM3NTYz*_ga_8JE65Q40S6*MTY2NzAzNzU2NC4xLjEuMTY2NzAzNzU2OC4wLjAuMA.."
+                    alt="Cappucinno">
                 <h2>Cappucinno</h2>
                 <h3>WITH</h3>
                 <div class="radio-group">
-                    <input type="radio" id="milk-cappucinno" value="cappucinno-milk-80" name="selector">
+                    <input type="radio" id="Cappucinno" value="Cappucinno-milk-80" name="selector">
                     <label for="milk-cappucinno">milk - 80</label>
-                    <input type="radio" id="cream-cappucinno" value="cappucinno-cream-90" name="selector">
+                    <input type="radio" id="Cappucinno" value="Cappucinno-cream-90" name="selector">
                     <label for="cream-cappucinno">cream - 90</label>
-                    <input type="radio" id="latte-cappucinno" value="cappucinno-latte-125" name="selector">
+                    <input type="radio" id="Cappucinno" value="Cappucinno-latte-125" name="selector">
                     <label for="latte-cappucinno">latte - 125</label>
-                      </div>
-                <button class = "btn" id="cp" >Add to Cart</button>
+                </div>
+                <button class="add-btn btn" id="cp">Add to Cart</button>
             </div>
             <div class="card">
-                <img src="https://source.unsplash.com/450x450/?latte-coffee" alt="latte">
+                <img src="https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?cs=srgb&dl=pexels-eyad-tariq-3879495.jpg&fm=jpg&_gl=1*t5vzoq*_ga*MTUyNjExNTU3OC4xNjY3MDM3NTYz*_ga_8JE65Q40S6*MTY2NzAzNzU2NC4xLjEuMTY2NzAzNzY2OS4wLjAuMA.."
+                    alt="latte">
                 <h2>Latte</h2>
                 <h3>WITH</h3>
                 <div class="radio-group">
-                    <input type="radio" id="milk-latte" value="latte-milk-100" name="selector" >
+                    <input type="radio" id="Latte" value="Latte-milk-100" name="selector">
                     <label for="milk-latte">milk - 100</label>
-                    <input type="radio" id="cream-latte" value="lattecream-125" name="selector">
+                    <input type="radio" id="Latte" value="Latte-cream-125" name="selector">
                     <label for="cream-latte">cream - 125</label>
-                    <input type="radio" id="latte-latte" value="latte-latte-150" name="selector">
+                    <input type="radio" id="Latte" value="Latte-latte-150" name="selector">
                     <label for="latte-latte">latte - 150</label>
-                      </div>
-                <button class = "btn" id="lt" >Add to Cart</button>
+                </div>
+                <button class="add-btn btn" id="lt">Add to Cart</button>
             </div>
         </div>
-        <div class = "cart" >
+        <div class="cart">
             <h2>price</h2>
             <ul class="payout-list">
             </ul>
+            <h2>Total</h2>
             <div class="total-price"></div>
         </div>
+        <button class = "pay-btn">
+            <h2>
+                Proceed to Buy
+            </h2>
+        </button>
     </section>
 </body>
+
 </html>
