@@ -3,27 +3,19 @@ window.onload = function () {
     constructor(...item) {
       this.item = item[0];
       this.prices = item[1];
-      // this.Espresso = prices[0]["Espresso"];
-      // this.Cappucinno = prices[1]["Cappucinno"];
-      // this.Latte = prices[2]["Latte"];
+      this.bill_msg = '';
     }
     add_item() {
       const list = document.getElementsByClassName("ul.payout-list");
       const new_item = document.createElement("li");
       const item_text = document.createTextNode(`${this.item}`);
-      const remove_button = document.createElement("button");
       const btn_text = document.createTextNode("x");
-      remove_button.appendChild(btn_text);
-      remove_button.classList.add("remove-btn");
-      remove_button.classList.add(`${this.item}`);
       new_item.appendChild(item_text);
-      new_item.appendChild(remove_button);
       document.querySelector("ul.payout-list").appendChild(new_item);
     }
-    delete_item() {}
     Total_amount(amount) {
       const total = amount.split("/");
-      console.log(total[0]);
+      // console.log(total[0]);
       var bill_Amt = parseInt(total[0]);
       const AmtDiv = document.querySelector(".total-price");
       const coffeeType = this.item.split("-");
@@ -33,11 +25,17 @@ window.onload = function () {
         }
       }
       AmtDiv.innerHTML = bill_Amt.toString() + "/-";
-      console.log("bill_amt", bill_Amt);
+      // console.log("bill_amt", bill_Amt);
     }
-    bill(item_list) {
+    bill_message(item_list, bill_amt) {
       item_list.push(this.item);
-      console.log(item_list);
+      var list = item_list;
+      this.bill_msg = "selected items:\n";
+      for (const items of list) {
+        this.bill_msg += items + "\n";
+      }
+      this.bill_msg = this.bill_msg + "\n";
+      this.bill_msg = this.bill_msg + "and the total amount is :" + bill_amt.toString();
     }
   }
   const prices = [
@@ -48,17 +46,13 @@ window.onload = function () {
     },
   ];
   var btnType = document.querySelectorAll(".add-btn");
-  var removeBtns = document.querySelectorAll(".remove-btn");
-  console.log(removeBtns, btnType);
   var radioGroup = document.querySelectorAll(".radio-group");
   var item_list = [];
   const AmtDiv = document.querySelector(".total-price");
   const AmtText = document.createTextNode("0/-");
   AmtDiv.appendChild(AmtText);
-
   var i = 0;
   length = btnType.length;
-  remove_length = removeBtns.length;
   for (i; i < length; i++) {
     let index = i;
     if (document.addEventListener) {
@@ -68,12 +62,17 @@ window.onload = function () {
           if (radio.checked) {
             addon = radio.value;
             total = AmtDiv.childNodes[0].data;
-            console.log("total", total);
-            // document.querySelector('ul.payout-list').innerHTML = '<li>'+`${addon}`+'</li>';
             order = new coffee(addon, prices);
             order.add_item();
             order.Total_amount(total);
-            order.bill(item_list);
+            total_amount =
+              document.querySelector(".total-price").childNodes[0].data;
+            order.bill_message(item_list, total_amount);
+            const pay = document.querySelector(".pay-btn");
+            console.log(pay);
+            pay.addEventListener("click", () => {
+              alert(order.bill_msg);
+            });
           }
         }
       });

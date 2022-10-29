@@ -124,21 +124,14 @@ li{
     font-size: 50px;
     padding:25px;
 }
-.buy-btn{
+.pay-btn{
     border-radius: 10px;
     border:none;
 }
-.buy-btn:hover{
+.pay-btn:hover{
     background-color:rgba(30,237,45,0.5);
 }
-.buy-btn:active{
+.pay-btn:active{
     transform: translateY(10px);
     transform: scale(0.8);
-}
-.remove-btn{
-    background-color: rgba(245,250,239,0.31);
-    padding:5px 8px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
 }
